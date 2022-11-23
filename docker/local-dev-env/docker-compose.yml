@@ -1,0 +1,26 @@
+version: "3"
+
+services:
+  taskpool-dev:
+    build:
+      context: $PWD/../../../
+      dockerfile: $PWD/../Dockerfile
+      args:
+        - BASE_IMAGE=taskbase/taskpool-database:1
+    ports:
+      - "58000:58000"
+    volumes:
+      - $PWD/../..:/taskpool
+    environment:
+      PYTHONPATH: /taskpool/server/src
+      TASKPOOL_DB_PATH: /taskpool/taskpool.db
+    command:
+      [
+        "uvicorn",
+        "main:taskpool_app",
+        "--host",
+        "0.0.0.0",
+        "--port",
+        "58000",
+        "--reload",
+      ]
