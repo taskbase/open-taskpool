@@ -1,0 +1,4 @@
+scripts/
+docker/
+venv/
+.pytest_cache
