@@ -83,7 +83,7 @@ All you will need are the two following endpoints:
 
 Check out the [OpenAPI Specification](https://taskpool.taskbase.com/redoc) for more details.
 
-### How to I get automatic feedback for students working with open taskpool exercises?
+### How do I get automatic feedback for students working with open taskpool exercises?
 
 This is where the [Taskbase Feedback Engine ©](https://www.taskbase.com/) will help you.
 
