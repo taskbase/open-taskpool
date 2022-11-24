@@ -26,7 +26,7 @@ Check out our [Showroom](https://showroom.taskbase.com/chapter/2/page/0) and see
 
 # Requirements
 
-## Clients
+## Managed Hosting
 
 None 😎 
 
@@ -58,7 +58,7 @@ Check usage instructions on _"How to run the API server"_ below.
 
 # Usage
 
-## For Clients
+## With Managed Hosting
 
 _This section is for you if you wish to integrate the open taskpool into your project but do not seek
 to self-host or extend it yourself_.
@@ -99,7 +99,7 @@ automatic feedback to the student's input for the specific open taskpool exercis
 
 Coming Soon - stay tuned 🤓.
 
-## For Self-hosting
+## With Self-hosting
 
 ### How to run the API server
 
