@@ -90,7 +90,7 @@ This is where the [Taskbase Feedback Engine ©](https://www.taskbase.com/) will 
 It is accessible via a [Bitmark Feedback API](https://bitmark-api.taskbase.com/documentation) and
 integrates seamlessly with the open taskpool. 
 
-After aggregating the retured [Bit](https://docs.bitmark.cloud/bits_overview/) exercise with student input
+After aggregating the returned [Bit](https://docs.bitmark.cloud/bits_overview/) exercise with student input
 you can do a `POST` to [computeFeedback](https://bitmark-api.taskbase.com/documentation#operation/computeFeedback), and you'll receive
 automatic feedback to the student's input for the specific open taskpool exercise.
 
