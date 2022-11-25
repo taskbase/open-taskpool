@@ -1,4 +1,4 @@
-<p align=" center">
+<p align="center">
   <a href="https://bitmark-association.org/opentaskpool"><img src="https://tb-open-taskpool.s3.eu-central-1.amazonaws.com/open-taskpool.png#" alt="open taskpool" style="height: 150px"/></a>
 </p>
 <p align="center">
