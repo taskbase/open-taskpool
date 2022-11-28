@@ -1,4 +1,4 @@
-<p align="center">
+<p align=" center">
   <a href="https://bitmark-association.org/opentaskpool"><img src="https://tb-open-taskpool.s3.eu-central-1.amazonaws.com/open-taskpool.png#" alt="open taskpool" style="height: 150px"/></a>
 </p>
 <p align="center">
@@ -126,6 +126,16 @@ Under [./scripts](./scripts) you will find a [README.md](./scripts/README.md) an
 that were used for generating the exercises. Following the steps there, you'll end up creating your own `taskpool.db` which
 you can then expose via the API server. By adjusting parameters in the scripts you'll be able to create your own exercises
 in the languages of your choice.
+
+# Outlook
+
+In future the [current dataset](https://tb-open-taskpool.s3.eu-central-1.amazonaws.com/taskpool.db) will be extendend by adding
+language learning exercises for:
+
+- DE 🇩🇪 - EN 🇬🇧
+- DE 🇩🇪 - FR 🇫🇷
+
+Stay tuned 🎓.
 
 # Credits
 
