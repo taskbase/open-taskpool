@@ -144,4 +144,4 @@ Stay tuned 🎓.
 All source data currently used in the open taskpool comes from the [Tatoeba Project](https://tatoeba.org/en) and are made
 available via the [Creative Commons Attribution 2.0](https://creativecommons.org/licenses/by/2.0/) License.
 
-![Creative Common](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg)
+![Creative Commons](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg)
