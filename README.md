@@ -105,7 +105,7 @@ Coming Soon - stay tuned 🤓.
 
 _This section is for you if you wish to run the Taskpool API server yourself._
 
-A seeded `taskpool.db` SQLite database with language learning exercises for UK 🇺🇦 - DE 🇩🇪 can be downloaded [here](https://tb-open-taskpool.s3.eu-central-1.amazonaws.com/taskpool.db). Download that file and place it inside the root of this repository.
+A seeded `taskpool.db` SQLite database with language learning exercises for UK 🇺🇦 → DE 🇩🇪 can be downloaded [here](https://tb-open-taskpool.s3.eu-central-1.amazonaws.com/taskpool.db). Download that file and place it inside the root of this repository.
 
 Running the API server is possible via docker. Simply do the following from within the root:
    ```shell
@@ -129,11 +129,11 @@ in the languages of your choice.
 
 # Outlook
 
-In future the [current dataset](https://tb-open-taskpool.s3.eu-central-1.amazonaws.com/taskpool.db) will be extendend by adding
+In thhe future the [current dataset](https://tb-open-taskpool.s3.eu-central-1.amazonaws.com/taskpool.db) will be extended by adding
 language learning exercises for:
 
-- DE 🇩🇪 - EN 🇬🇧
-- DE 🇩🇪 - FR 🇫🇷
+- DE 🇩🇪 → EN 🇬🇧
+- DE 🇩🇪 → FR 🇫🇷
 
 Stay tuned 🎓.
 
