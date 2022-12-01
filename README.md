@@ -105,7 +105,7 @@ Coming Soon - stay tuned 🤓.
 
 _This section is for you if you wish to run the Taskpool API server yourself._
 
-A seeded `taskpool.db` SQLite database with language learning exercises for UK 🇺🇦 - DE 🇩🇪 can be downloaded [here](https://tb-open-taskpool.s3.eu-central-1.amazonaws.com/taskpool.db). Download that file and place it inside the root of this repository.
+A seeded `taskpool.db` SQLite database with language learning exercises for UK 🇺🇦 → DE 🇩🇪 can be downloaded [here](https://tb-open-taskpool.s3.eu-central-1.amazonaws.com/taskpool.db). Download that file and place it inside the root of this repository.
 
 Running the API server is possible via docker. Simply do the following from within the root:
    ```shell
@@ -127,6 +127,16 @@ that were used for generating the exercises. Following the steps there, you'll e
 you can then expose via the API server. By adjusting parameters in the scripts you'll be able to create your own exercises
 in the languages of your choice.
 
+# Outlook
+
+In the future the [current dataset](https://tb-open-taskpool.s3.eu-central-1.amazonaws.com/taskpool.db) will be extended by adding
+language learning exercises for:
+
+- DE 🇩🇪 → EN 🇬🇧
+- DE 🇩🇪 → FR 🇫🇷
+
+Stay tuned 🎓.
+
 # Credits
 
 ## Data Sources
@@ -134,4 +144,4 @@ in the languages of your choice.
 All source data currently used in the open taskpool comes from the [Tatoeba Project](https://tatoeba.org/en) and are made
 available via the [Creative Commons Attribution 2.0](https://creativecommons.org/licenses/by/2.0/) License.
 
-![Creative Common](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg)
+![Creative Commons](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg)
