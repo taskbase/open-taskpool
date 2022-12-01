@@ -129,7 +129,7 @@ in the languages of your choice.
 
 # Outlook
 
-In thhe future the [current dataset](https://tb-open-taskpool.s3.eu-central-1.amazonaws.com/taskpool.db) will be extended by adding
+In the future the [current dataset](https://tb-open-taskpool.s3.eu-central-1.amazonaws.com/taskpool.db) will be extended by adding
 language learning exercises for:
 
 - DE 🇩🇪 → EN 🇬🇧
