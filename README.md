@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://bitmark-association.org/opentaskpool"><img src="https://tb-open-taskpool.s3.eu-central-1.amazonaws.com/open-taskpool.png#" alt="open taskpool" style="height: 150px"/></a>
+  <a href="https://bitmark-association.org/opentaskpool"><img src="https://tb-open-taskpool.s3.eu-central-1.amazonaws.com/open-taskpool.png" alt="open taskpool" style="height: 150px"/></a>
 </p>
 <p align="center">
   The Open Taskpool is an open source curated set of language learning tasks, free to use under<br><br>
