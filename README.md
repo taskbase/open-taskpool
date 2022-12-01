@@ -2,7 +2,7 @@
   <a href="https://bitmark-association.org/opentaskpool"><img src="https://tb-open-taskpool.s3.eu-central-1.amazonaws.com/open-taskpool.png#" alt="open taskpool" style="height: 150px"/></a>
 </p>
 <p align="center">
-  The open taskpool is an open source curated set of language learning tasks, free to use under<br><br>
+  The Open Taskpool is an open source curated set of language learning tasks, free to use under<br><br>
   <a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg" alt="Creative Commons" />
   <br>
   Creative Commons Attribution 4.0
@@ -21,7 +21,7 @@ The data format used is the open source standard [Bitmark](https://bitmark-assoc
 
 # Exercise Examples
 
-Check out our [Showroom](https://showroom.taskbase.com/chapter/2/page/0) and see how open taskpool exercises and the 
+Check out our [Showroom](https://showroom.taskbase.com/chapter/2/page/0) and see how Open Taskpool exercises and the 
 [Taskbase Feedback Engine ©](https://www.taskbase.com/) can bring your language learning platform to the next level 🚀.
 
 # Requirements
@@ -60,10 +60,10 @@ Check usage instructions on _"How to run the API server"_ below.
 
 ## With Managed Hosting
 
-_This section is for you if you wish to integrate the open taskpool into your project but do not seek
+_This section is for you if you wish to integrate the Open Taskpool into your project but do not seek
 to self-host or extend it yourself_.
 
-The open taskpool ist hosted under [https://taskpool.taskbase.com](https://taskpool.taskbase.com/redoc).
+The Open Taskpool ist hosted under [https://taskpool.taskbase.com](https://taskpool.taskbase.com/redoc).
 
 All you will need are the two following endpoints:
 
@@ -83,16 +83,16 @@ All you will need are the two following endpoints:
 
 Check out the [OpenAPI Specification](https://taskpool.taskbase.com/redoc) for more details.
 
-### How do I get automatic feedback for students working with open taskpool exercises?
+### How do I get automatic feedback for students working with Open Taskpool exercises?
 
 This is where the [Taskbase Feedback Engine ©](https://www.taskbase.com/) will help you.
 
 It is accessible via a [Bitmark Feedback API](https://bitmark-api.taskbase.com/documentation) and
-integrates seamlessly with the open taskpool. 
+integrates seamlessly with the Open Taskpool. 
 
 After aggregating the returned [Bit](https://docs.bitmark.cloud/bits_overview/) exercise with student input
 you can do a `POST` to [computeFeedback](https://bitmark-api.taskbase.com/documentation#operation/computeFeedback), and you'll receive
-automatic feedback to the student's input for the specific open taskpool exercise.
+automatic feedback to the student's input for the specific Open Taskpool exercise.
 
 
 ### Get a free trial to the Feedback API 
@@ -141,7 +141,7 @@ Stay tuned 🎓.
 
 ## Data Sources
 
-All source data currently used in the open taskpool comes from the [Tatoeba Project](https://tatoeba.org/en) and are made
+All source data currently used in the Open Taskpool comes from the [Tatoeba Project](https://tatoeba.org/en) and are made
 available via the [Creative Commons Attribution 2.0](https://creativecommons.org/licenses/by/2.0/) License.
 
 ![Creative Commons](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg)
