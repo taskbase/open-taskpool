@@ -21,7 +21,7 @@ The data format used is the open source standard [Bitmark](https://bitmark-assoc
 
 # Exercise Examples
 
-Check out our [Showroom](https://showroom.taskbase.com/chapter/2/page/0) and see how Open Taskpool exercises and the 
+Check out our [Showroom](https://showroom.taskbase.com/chapter/0/page/3) and see how Open Taskpool exercises and the 
 [Taskbase Feedback Engine ©](https://www.taskbase.com/) can bring your language learning platform to the next level 🚀.
 
 # Requirements
