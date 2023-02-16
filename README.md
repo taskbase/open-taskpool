@@ -124,7 +124,7 @@ Running the API server is possible via docker. Simply do the following from with
 This will spin up a docker container and expose the API server under port [:58000](http://localhost:58000).
 Visit [localhost:58000/redoc](http://localhost:58000/redoc) to access the OpenAPI Specification.
 
-The DB is included in the [base image](https://hub.docker.com/r/taskbase/taskpool-database) of that container.
+The database is included in the [base image](https://hub.docker.com/r/taskbase/taskpool-database) of that container.
 
 You can also download a seeded `taskpool.db` SQLite database separately [here](https://tb-open-taskpool.s3.eu-central-1.amazonaws.com/taskpool.db). 
 It includes language learning exercises for UK 🇺🇦 → DE 🇩🇪 and DE 🇩🇪 → EN 🇬🇧.
