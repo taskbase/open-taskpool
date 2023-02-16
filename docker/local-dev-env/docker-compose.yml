@@ -6,14 +6,15 @@ services:
       context: $PWD/../../../
       dockerfile: $PWD/../Dockerfile
       args:
-        - BASE_IMAGE=taskbase/taskpool-database:1
+        - BASE_IMAGE=taskbase/taskpool-database:3
     ports:
       - "58000:58000"
     volumes:
       - $PWD/../..:/taskpool
     environment:
       PYTHONPATH: /taskpool/server/src
-      TASKPOOL_DB_PATH: /taskpool/taskpool.db
+      # Set this if you want to use your custom DB and not the one provided in the base image above
+      # TASKPOOL_DB_PATH: /taskpool/taskpool.db
     command:
       [
         "uvicorn",

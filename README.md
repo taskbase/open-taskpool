@@ -2,20 +2,29 @@
   <a href="https://bitmark-association.org/opentaskpool"><img src="https://tb-open-taskpool.s3.eu-central-1.amazonaws.com/open-taskpool.png" alt="open taskpool" style="height: 150px"/></a>
 </p>
 <p align="center">
-  The Open Taskpool is an open source curated set of language learning tasks, free to use under<br><br>
+  The Open Taskpool is an open source community curated set of language learning tasks, free to use under<br><br>
   <a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg" alt="Creative Commons" />
   <br>
   Creative Commons Attribution 4.0
   </a>
 </p>
+<p align="center">
+Any contributions from the community are highly appreciated.
+<br>
+Let us fix education together!
+</p>
 
 ---
 
-Currently supported are the following language learning tasks for UK 🇺🇦 - DE 🇩🇪:
+Currently supported are the following language learning tasks:
 - select the missing word
 - write the missing word
 - write what you hear
 - translate the sentence
+
+for the following language pairs:
+- UK 🇺🇦 → DE 🇩🇪
+- DE 🇩🇪 → EN 🇬🇧
 
 The data format used is the open source standard [Bitmark](https://bitmark-association.org/).
 
@@ -105,7 +114,6 @@ Coming Soon - stay tuned 🤓.
 
 _This section is for you if you wish to run the Taskpool API server yourself._
 
-A seeded `taskpool.db` SQLite database with language learning exercises for UK 🇺🇦 → DE 🇩🇪 can be downloaded [here](https://tb-open-taskpool.s3.eu-central-1.amazonaws.com/taskpool.db). Download that file and place it inside the root of this repository.
 
 Running the API server is possible via docker. Simply do the following from within the root:
    ```shell
@@ -116,6 +124,15 @@ Running the API server is possible via docker. Simply do the following from with
 This will spin up a docker container and expose the API server under port [:58000](http://localhost:58000).
 Visit [localhost:58000/redoc](http://localhost:58000/redoc) to access the OpenAPI Specification.
 
+The database is included in the [base image](https://hub.docker.com/r/taskbase/taskpool-database) of that container.
+
+You can also download a seeded `taskpool.db` SQLite database separately [here](https://tb-open-taskpool.s3.eu-central-1.amazonaws.com/taskpool.db). 
+It includes language learning exercises for UK 🇺🇦 → DE 🇩🇪 and DE 🇩🇪 → EN 🇬🇧.
+
+Obviously, you can also generate your own `taskpool.db` 😎. 
+
+To overwrite the default database in the image, place the `taskpool.db` file inside the root of this repository and uncomment the
+`TASKPOOL_DB_PATH` environment variable inside the `docker-compose.yml` file and make sure it's pointing to the correct file.
 
 ### How to generate your own exercises 
 
@@ -132,7 +149,6 @@ in the languages of your choice.
 In the future the [current dataset](https://tb-open-taskpool.s3.eu-central-1.amazonaws.com/taskpool.db) will be extended by adding
 language learning exercises for:
 
-- DE 🇩🇪 → EN 🇬🇧
 - DE 🇩🇪 → FR 🇫🇷
 
 Stay tuned 🎓.

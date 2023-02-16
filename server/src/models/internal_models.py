@@ -5,11 +5,13 @@ import json
 
 class TranslationPair(str, Enum):
     UK_DE = "uk->de"
+    DE_EN = "de->en"
 
 
 class Language(str, Enum):
     uk = "uk"
     de = "de"
+    en = "en"
 
 
 class InternalTranslationPair:
