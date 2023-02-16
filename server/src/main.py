@@ -1,16 +1,23 @@
 import uvicorn
 from fastapi import FastAPI
+from fastapi.openapi.utils import get_openapi
 from fastapi.staticfiles import StaticFiles
 from controllers import router
 
 description = '''
-Kristian: kristian@taskbase.com | URL: https://www.taskbase.com/contact | License: <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons</a>
+Contact: kristian@taskbase.com | <a href="https://creativecommons.org/licenses/by/4.0/"> Creative Commons Attribution 4.0 </a> 
 
 # Introduction
 
-**NOTE**: This document is work-in-progress. Therefore, small changes like re-namings or re-structuring of data may happen before the initial release.
+The taskpool is a growing collection of exercises ("tasks"), which can be fetched through this API and graded with the [Bitmark Feedback API](https://bitmark-api.taskbase.com/documentation). 
 
-The taskpool is a growing collection of exercises ("tasks"), which can be fetched through this API and graded with the feedback API (https://bitmark-api.taskbase.com/documentation). It can kickstart your language learning project, by having a large number of tasks ready to go from the beginning!
+It can kickstart your language learning project, by having a large number of tasks ready to go from the beginning!
+
+Currently supported are the language learning tasks for:
+- UK 🇺🇦 --> DE 🇩🇪
+- DE 🇩🇪 --> EN 🇬🇧
+
+The source code is available at [https://github.com/taskbase/open-taskpool](https://github.com/taskbase/open-taskpool).
 
 '''
 
@@ -18,19 +25,32 @@ tags_metadata = [
     {
         "name": "Exercise",
         "description": "Endpoints for working with exercises."
+    },
+    {
+        "name": "Metadata"
     }
 ]
 
 
 def initialize():
-    app = FastAPI(
-        title="Taskpool API",
-        version="0.0.1",
-        description=description,
-        openapi_tags=tags_metadata
-    )
+    app = FastAPI()
     app.include_router(router)
     app.mount("/audio", StaticFiles(directory="audio-generated"), name="audio")
+
+    openapi_schema = get_openapi(
+        title="Open Taskpool API",
+        version="0.0.2",
+        description=description,
+        tags=tags_metadata,
+        routes=app.routes
+    )
+
+    openapi_schema["info"]["x-logo"] = {
+        "url": "https://tb-open-taskpool.s3.eu-central-1.amazonaws.com/open-taskpool.png"
+    }
+
+    app.openapi_schema = openapi_schema
+
     return app
 
 

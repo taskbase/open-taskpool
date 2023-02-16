@@ -22,7 +22,8 @@ translation_pair_query_doc = 'The left side is the source language and the right
 )
 async def translation_pairs() -> List[TranslationPairWrapper]:
     return [
-        TranslationPairWrapper(translationPair=TranslationPair.UK_DE)
+        TranslationPairWrapper(translationPair=TranslationPair.UK_DE),
+        TranslationPairWrapper(translationPair=TranslationPair.DE_EN)
     ]
 
 

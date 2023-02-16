@@ -39,10 +39,13 @@ def feedback_engine(exercise_type: str):
 def test_translation_pairs(client: TestClient):
     response = client.get("/translation-pairs")
     assert response.status_code == 200
-    assert len(response.json()) == 1
+    assert len(response.json()) == 2
     assert response.json() == [
         {
             "translationPair": "uk->de"
+        },
+        {
+            "translationPair": "de->en"
         }
     ]
 

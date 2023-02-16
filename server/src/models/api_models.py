@@ -15,6 +15,8 @@ def translation_pair_to_internal_translation_pair(pair: TranslationPair) -> Inte
     match pair:
         case TranslationPair.UK_DE:
             return InternalTranslationPair(Language.uk, Language.de)
+        case TranslationPair.DE_EN:
+            return InternalTranslationPair(Language.de, Language.en)
     raise Exception("Non exhaustive match statement")
 
 
@@ -189,18 +191,30 @@ class Exercise(BaseModel):
     bitmark: BitMark = Field(description="The object holding the bitmark quizzes.")
 
 
-def create_instruction(exerciseType: ExerciseType, source_sentence_text: str) -> str:
+def create_instruction(exerciseType: ExerciseType, source_sentence_text: str, language: Language) -> str:
     if exerciseType == ExerciseType.ALL:
         raise ValueError("ExerciseType.ALL is not a valid type to create an instruction. Use a specific type when "
                          "calling this method.")
 
     # If multiple instruction languages are required nest the languages per ExerciseType (need exercise language)
-    instruction_map: Dict[ExerciseType, str] = {
-        ExerciseType.BITMARK_ESSAY: "Перекладіть речення: \"{}\"",
-        ExerciseType.BITMARK_CLOZE: "Дано: \"{}\", запишіть пропущене слово",
-        ExerciseType.BITMARK_MULTIPLE_CHOICE_TEXT: "Дано: \"{}\", виберіть пропущене слово",
+    instruction_map: Dict[ExerciseType, Dict[Language, str]] = {
+        ExerciseType.BITMARK_ESSAY: {
+            Language.uk: "Перекладіть речення: \"{}\"",
+            Language.de: "Übersetzen Sie den Satz: \"{}\"",
+            Language.en: "Translate the sentence: \"{}\"",
+        },
+        ExerciseType.BITMARK_CLOZE: {
+            Language.uk: "Дано: \"{}\", запишіть пропущене слово",
+            Language.de: "Gegeben: \"{}\", schreiben Sie das fehlende Wort",
+            Language.en: "Given: \"{}\", write the missing word",
+        },
+        ExerciseType.BITMARK_MULTIPLE_CHOICE_TEXT: {
+            Language.uk:  "Дано: \"{}\", виберіть пропущене слово",
+            Language.de:  "Gegeben: \"{}\", wählen Sie das fehlende Wort aus",
+            Language.en:  "Given: \"{}\", select the missing word",
+        }
     }
-    return instruction_map[exerciseType].format(source_sentence_text)
+    return instruction_map[exerciseType][language].format(source_sentence_text)
 
 
 def create_bitmark_essay(exercise: InternalExercise, exerciseType: ExerciseType, base_url: str) -> Optional[EssayBit]:
@@ -218,7 +232,8 @@ def create_bitmark_essay(exercise: InternalExercise, exerciseType: ExerciseType,
         ),
         instruction=create_instruction(
             exerciseType=ExerciseType.BITMARK_ESSAY,
-            source_sentence_text=exercise.source_sentence_text
+            source_sentence_text=exercise.source_sentence_text,
+            language=exercise.source_sentence_language
         ),
         type="essay",
         sampleSolution=exercise.target_sentence_text,
@@ -282,7 +297,8 @@ def create_bitmark_cloze(exercise: InternalExercise, exerciseType: ExerciseType)
         ),
         instruction=create_instruction(
             exerciseType=ExerciseType.BITMARK_CLOZE,
-            source_sentence_text=exercise.source_sentence_text
+            source_sentence_text=exercise.source_sentence_text,
+            language=exercise.source_sentence_language
         ),
         type="cloze",
         body=gaps
@@ -333,7 +349,8 @@ def create_bitmark_multiple_choice(
         ),
         instruction=create_instruction(
             exerciseType=ExerciseType.BITMARK_MULTIPLE_CHOICE_TEXT,
-            source_sentence_text=exercise.source_sentence_text
+            source_sentence_text=exercise.source_sentence_text,
+            language=exercise.source_sentence_language
         ),
         type="multiple-choice-text",
         body=gaps
