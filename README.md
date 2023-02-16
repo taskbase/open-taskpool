@@ -131,7 +131,7 @@ It includes language learning exercises for UK 🇺🇦 → DE 🇩🇪 and DE �
 
 Obviously, you can also generate your own `taskpool.db` 😎. 
 
-To overwrite the per default available DB in the image, place the `taskpool.db` file inside the root of this repository and uncomment the
+To overwrite the default database in the image, place the `taskpool.db` file inside the root of this repository and uncomment the
 `TASKPOOL_DB_PATH` environment variable inside the `docker-compose.yml` file and make sure it's pointing to the correct file.
 
 ### How to generate your own exercises 
